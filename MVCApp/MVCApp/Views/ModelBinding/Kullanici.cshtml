@@ -1,0 +1,37 @@
+﻿@model MVCApp.Models.Kullanici
+
+@{
+    ViewBag.Title = "Kullanici";
+}
+
+<h2>KullaniciBilgileri</h2>
+
+@*@Model.Ad*@
+
+@using (Html.BeginForm())
+
+{
+    <div>
+        Ad : @Html.EditorFor(model => model.Ad)
+        <hr />
+        Soyad : @Html.EditorFor(model => model.Soyad)
+        <hr />
+        Email : @Html.EditorFor(model => model.Email)
+        <hr />
+        Kullanici Adi : @Html.EditorFor(model => model.KullaniciAdi)
+        <hr />
+        Sifre : @Html.EditorFor(model => model.Sifre)
+        <hr />
+        <input id="Submit1" type="submit" value="Gonder" />
+    </div>
+}
+
+@{
+    @ViewBag.Mesaj
+    <hr />
+    @ViewData["Vdata"]
+    <hr />
+    @TempData["TData"]
+}
+
+

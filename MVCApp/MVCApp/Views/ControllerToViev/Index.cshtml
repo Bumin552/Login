@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Controllerden viev'e veri tasıma";
+}
+
+<h2>Controllerden Viev'e Veri Tasıma</h2>
+<div>
+    Ürün Kategorisi : @ViewBag.KategoriAdi
+    <hr />
+    Ürün Adı : @ViewData["Urun Adi"]
+    <hr />
+    Ürün Fiyati : @TempData["urun fiyati"]
+</div>
+

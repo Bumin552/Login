@@ -1,0 +1,29 @@
+﻿@model MVCApp.Models.Adres
+
+@{
+    ViewBag.Title = "Adres";
+}
+
+<h2>Adres Bilgileri</h2>
+@using (Html.BeginForm())
+
+{
+    <div>
+        Sehir : @Html.EditorFor(model => model.Sehir)
+        <hr />
+        Ilce : @Html.EditorFor(model => model.Ilce)
+        <hr />
+        Acık Adres : @Html.EditorFor(model => model.AcıkAdres)
+        <hr />        
+        <input id="Submit1" type="submit" value="Gonder" />
+    </div>
+}
+
+@{
+    @ViewBag.Mesaj
+    <hr />
+    @ViewData["Vdata"]
+    <hr />
+    @TempData["TData"]
+}
+

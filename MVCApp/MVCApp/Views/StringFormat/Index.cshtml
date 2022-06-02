@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "String Format ile Formatlama";
+}
+
+<h2>String Format ile Formatlama</h2>
+
+<h3>
+    Tarih Formatlama
+</h3>
+@{ 
+    DateTime tarih = DateTime.Now;
+
+    @("Ayin Gunu - dd :" + String.Format("{0:dd}", tarih));
+}
+
+
